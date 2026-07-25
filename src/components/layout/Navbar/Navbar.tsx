@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTheme } from "../../../context/ThemeContext";
+import { useTheme } from "../../../hook/useTheme";
 
 const Navbar = () => {
     
@@ -61,7 +61,7 @@ const Navbar = () => {
 
             {isMenuOpen && (
                 <div className="md:hidden bg-white text-gray-900 dark:bg-gray-800 dark:text-white border-t border-gray-200 dark:border-gray-700">
-                    
+
                 <div className="flex items-center justify-between p-4">
                 <span>Theme</span>
                 <button
