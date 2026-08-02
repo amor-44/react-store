@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTheme } from "../../../hooks/useTheme";
+import { useCart } from "../../../hooks/useCart";
 
 const Navbar = () => {
     
@@ -14,7 +15,9 @@ const Navbar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const {theme, toggleTheme} = useTheme();
+    const {cartItems} = useCart();
 
+    const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     return (
         <nav className= "px-6 h-16 bg-white text-gray-900 dark:bg-gray-800 dark:text-white">
@@ -40,7 +43,7 @@ const Navbar = () => {
                     transition-colors"/>
                 <div className="hidden md:flex items-center gap-2">
                 <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-800 transition-colors cursor-pointer">
-                    Cart
+                    Cart ({cartItemCount})
                 </button>
 
                 <button
