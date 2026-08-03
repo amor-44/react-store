@@ -3,6 +3,7 @@ import type { Product } from "../types/Product";
 import getProducts from "../services/productService";
 
 
+
 function useProducts() {    
 const [products, setProducts] = useState<Product[]>([]);
 const [loading, setLoading] = useState<boolean>(true)
