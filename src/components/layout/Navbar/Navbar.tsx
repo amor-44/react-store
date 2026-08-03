@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { useTheme } from "../../../hooks/useTheme";
 import { useCart } from "../../../hooks/useCart";
+import { Link } from "react-router";
 
 const Navbar = () => {
     
     const navLinkClass= "transition-colors hover:text-indigo-500 duration-200";
 
     const navLinks = [
-        {name: "Home",href: "#"},
-        {name: "Products",href: "#"},
-        {name: "About",href: "#"},
-        {name: "Contact",href: "#"},
+        {name: "Home",href: "/"},
+        {name: "Products",href: "/products"},
+        {name: "About",href: "/about"},
+        {name: "Contact",href: "/contact"},
     ];
 
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -27,9 +28,9 @@ const Navbar = () => {
                 <ul className="hidden md:flex gap-4">
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <a href={link.href} className={navLinkClass}>
+                            <Link to={link.href} className={navLinkClass}>
                                 {link.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -78,10 +79,10 @@ const Navbar = () => {
                     <ul className="flex flex-col gap-4 p-4">
                         {navLinks.map((link) =>(
                             <li key={link.name}>
-                                <a href={link.href} className={navLinkClass}
+                                <Link to={link.href} className={navLinkClass}
                                 onClick={()=> setIsMenuOpen(false)}>
                                     {link.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
