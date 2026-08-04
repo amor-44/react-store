@@ -1,75 +1,80 @@
-# React + TypeScript + Vite
+# React Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce store built with React, TypeScript, Tailwind CSS, and React Router.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Product listing fetched from Fake Store API
+- Dynamic product details pages
+- Shopping cart functionality
+- Add and remove products from cart
+- Clear cart
+- Cart item counter
+- Light / Dark mode
+- Responsive design
+- React Router navigation
+- Nested routes and layouts
+- Custom React Hooks
+- Context API for global state
+- Loading and error states
+- Contact form
+- About page
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- React Router
+- Tailwind CSS
+- Context API
+- Custom Hooks
+- Fetch API
+- Fake Store API
+- Vite
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Clone the repository:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+git clone YOUR_REPOSITORY_URL
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Navigate to the project:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+cd react-store
 
-```
+Install dependencies:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run the development server:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+npm run dev
 
-```
+## 📁 Project Structure
+
+src/
+├── components/
+├── hooks/
+├── pages/
+├── services/
+├── types/
+├── context/
+├── assets/
+└── main.tsx
+
+## 🔮 Future Improvements
+
+- Product search and filtering
+- Product categories
+- Cart quantity controls
+- Checkout flow
+- Backend integration
+- Authentication
+- Persistent cart storage
+
+## 👨‍💻 Author
+
+Amr Hesham
+
+- LinkedIn: [https://www.linkedin.com/in/amr-hesham-10082a276/]
+- GitHub: [https://github.com/amor-44]
